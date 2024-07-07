@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/index.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+    <div class="home">
+        <div class="text">
+            <h1 class="text-center my-4 pt-4 mb-5">
+                Bookmarker
+            </h1>
+            
+        </div>
+       <div class="bookmark-body container">
+        <div class="container"> 
+            <div class="book text-center my-4">
+            
+                <h4 class="d-inline ">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Book Mark Your Favorite Sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h4>
+                
+            </div>
+            <div class="form ">
+               <div class="draw my-3 fw-bolder">
+                <i class="fa-solid fa-book-bookmark pe-2"></i> <p class="d-inline">Site Name</p>
+               </div>
+                <div class="mb-3 border-2">
+                    <input type="text"  id="bookmark" oninput="validationName()" class="form-control"  placeholder="Bookmark Name">
+                  </div>
+
+
+                  <div class="draw my-3 fw-bolder">
+                    <i class="fa-solid fa-link pe-2"></i> <p class="d-inline">Site URL</p>
+                   </div>
+                    <div class="mb-3 border-2">
+                        <input type="text"  id="website" oninput="validationUrl()" class="form-control rounded-3" placeholder="Website URL">
+                       
+                      </div>
+                      <button type="button" onclick="addSite()" class="but p-2 pe-5 ps-5 rounded-2 mb-4 press">
+                        Submit
+
+                      </button>
+                    
+            </div>
+            
+        </div>
+
+       </div>
+     <div class="visit-table container my-5">
+        <table class="table">
+            <thead >
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableSite">
+                
+            </tbody>
+        </table>
+
+     </div>
+     <div class="cover d-none justify-content-center align-items-center ">
+        <div class="small-cover py-3 pb-5 ">
+            <div class="top ps-4">
+                <i class="fa-solid fa-circle text-danger fs-4"></i>
+                <i class="fa-solid fa-circle text-warning fs-4"></i>
+                <i class="fa-solid fa-circle text-success fs-4"></i>
+                <i class="fa-regular fa-circle-xmark exit fs-3" id="close" onclick="hideCover()" ></i>
+                <div class="text-down py-5 ps-3">
+                    <h4>
+                        Site Name or Url is not valid, Please follow the rules below :
+                    </h4>
+                    <p class="pt-3">
+                        <i class="fa-regular fa-circle-right text-danger"></i> Site name must contain at least 3 characters
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-circle-right text-danger"></i> Site URL must be a valid one
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+     </div>
+       
+        
+    </div>
+
+
+
+<!-- ............................................................. -->
+ <script src="js/index.js"></script>   
+</body>
+</html>
